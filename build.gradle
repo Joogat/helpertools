@@ -15,7 +15,9 @@ buildscript {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
-
+subprojects {
+    tasks.withType(Javadoc).all { enabled = false }
+}
 allprojects {
     repositories {
         google()
